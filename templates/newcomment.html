@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>
+    {% if not editcomment %}
+      New comment
+    {% else %}
+      Edit comment
+    {% endif %}
+  </h2>
+
+    <form method="post">
+
+      <label>
+        <div>comment</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+
+      <div class="error">{{error}}</div>
+
+      <input type="submit">
+
+    </form>
+{% endblock %}

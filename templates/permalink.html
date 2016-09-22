@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{post.render(post.key().id()) | safe}}
+
+  {% for comment in comments %}
+  <br>
+  {{comment.render(user = user) | safe}}
+  <br>
+  {% endfor %}
+{% endblock %}

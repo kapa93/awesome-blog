@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <link type="text/css" rel="stylesheet" href="/static/w3.css" />
+
+  <title>Awesome Blog</title>
+</head>
+
+<body class="w3-light-grey">
+  <div class="w3-content">
+    <a href="/blog" class="main-title">
+      Awesome Blog
+    </a>
+    <div class="w3-container">
+    <img src="/static/cloud_banner.jpg" alt="Lights" style="width:100%">
+    </div>
+    <div class="login-area">
+      <div class="w3-card w3-padding w3-white">
+        {% if user %}
+          {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+        {% else %}
+          <a class="login-link" href="/login">login</a>
+          |
+          <a class="login-link" href="/signup">signup</a>
+        {% endif %}
+      </div>
+      <a class="w3-btn w3-blue" href="/blog/newpost">New Post</a>
+    </div>
+
+      <div class="w3-card-4 w3-padding w3-margin w3-white">
+        <div id="content">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+

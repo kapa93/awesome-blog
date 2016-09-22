@@ -1,0 +1,22 @@
+<div class="comment">
+  <div class="comment-heading">
+    <div class="comment-username">
+      {{comment.username | safe}}
+    </div>
+
+    <div class="comment-date">
+      {{comment.created.strftime("%b %d, %Y")}}
+    </div>
+  </div><hr>
+  <div class="comment-content">
+    {{comment._render_text | safe}}
+  </div>
+  <br>
+  <span class="comment-actions">
+    <a href="{{comment.post_id}}/{{comment.key().id()}}/like">({{comment.likes}}) like</a>
+    <br>
+      <a href="{{comment.post_id}}/{{comment.key().id()}}/edit">edit</a>
+      <a href="{{comment.post_id}}/{{comment.key().id()}}/delete">delete</a>
+
+  </span>
+</div>
