@@ -1,12 +1,7 @@
-HOW TO RUN THIS PROJECT
-=======================
-
-You will need Google App Engine in order to run this site locally.
-
-1. First, install the google app engine SDK (https://cloud.google.com/appengine/downloads).
-2. Next, sign up for a google app engine acount.
-(https://sites.google.com/site/gdevelopercodelabs/app-engine/creating-your-app-engine-account)
-3. Lastly, import and run the app using the Google App Engine Launcher.
+<h3>How to run this project</h3>
+1. Fork repo or download the zip file.
+2. Open terminal window and cd into 'awesome-blog' directory and type in `python -m SimpleHTTPServer 8000` (or whichever port you prefer)
+3. Open browser and type in `http://127.0.0.1:8000`
 
 PUBLIC VIEW URL:
 http://blog-140519.appspot.com/
